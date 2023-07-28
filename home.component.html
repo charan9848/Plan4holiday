@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Plan4Holiday - Your Ultimate Travel Guide</title>
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="myPage">
+    <div class="scroll-container">
+   
+    
+    <!-- Home Page Content -->
+    <div class="w3-container w3-padding-64" style="background-image: url('https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg?cs=srgb&dl=pexels-veeterzy-39811.jpg&fm=jpg'); background-size: cover; background-position: center;">
+        <h1 class="w3-text-white w3-jumbo w3-animate-opacity" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);">Welcome to <span class="pink">Plan4Holiday</span></h1>
+        <p class="w3-text-black w3-large w3-animate-opacity" style="color: black;">Your Ultimate Travel Guide</p>
+        <img width="64" height="64" src="https://img.icons8.com/external-filled-outline-wichaiwi/64/external-tour-digital-economy-filled-outline-wichaiwi.png" alt="external-tour-digital-economy-filled-outline-wichaiwi"/>
+    </div>
+
+   
+    
+    <div class="w3-container w3-padding-64">
+        <h2 style="color: black;">Explore The World</h2>
+        <div class="w3-row-padding w3-margin-top">
+            <!-- Add featured package cards here -->
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="https://lh3.googleusercontent.com/proxy/mc77jok1KQ-JFg4gQAUeNwDKPEP2bNpHMXACDo8Vaz16n9ZJpDtEdpubLAJhxd-sMV1T2kCDixvas_eBsBRbXY6gVXaMFRjX5nqNwoM0YKIO3mCbWxHj1GI8wCyxqdxz9tOD_6kPtmreEJ0IEddhfL1yo1RbH7Y=s1360-w1360-h1020" alt="Package 1">
+                    <div class="w3-container">
+                        <h3 style="color: black;">Packages</h3>
+                        <p>Are you ready to escape the everyday hustle and bustle and embark on a journey to paradise? Discover the ultimate retreat designed to soothe your soul and create lasting memories. Welcome to "Plan4Holiday"!</p>
+                        <a [routerLink]="['/packages']" class="w3-btn w3-black">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="https://c4.wallpaperflare.com/wallpaper/624/380/1000/life-resort-hotel-resort-hotel-wallpaper-preview.jpg" alt="Package 2">
+                    <div class="w3-container">
+                        <h3 style="color: black;">Hotels</h3>
+                        <p>Book your dream holiday with us today and let the journey to paradise begin!.Welcome to Paradise Resort & Spa, where dreams become reality and every moment is a cherished memory. </p>
+                        <a [routerLink]="['/hotels']" class="w3-btn w3-black">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="https://decisionhouse.co.uk/wp-content/uploads/2020/01/brBe5pGVSwGi0dC3192U_Sunset20in20Dunhuang-1054x675.jpg" alt="Gallery">
+                    <div class="w3-container">
+                        <h3 style="color: black;">Gallery</h3>
+                        <p>Welcome to the captivating world of Plan4Holiday's Image Gallery, where wanderlust comes to life!  Get ready to indulge </p>
+                        <a [routerLink]="['/gallery']" class="w3-btn w3-black">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+<!-- holiday.component.html -->
+<div class="image-wrapper">
+    <div class="matter">
+        <br><br>
+      <h2 style="color: black;">Plan your Trip</h2><br>
+      <p>This trip is designed to immerse you in a diverse and exciting experience filled with exploration, culture, and natural wonders. Whether you're a solo traveler, a couple, or a group of friends, get ready to embark on a journey that will leave you with lasting memories.</p>
+    </div>
+    <div class="image-container">
+      <div class="image-slide" *ngFor="let destination of holidayDestinations">
+        <img [src]="destination.imageUrl" alt="Holiday Destination" class="animated-image" [@slideInOut]="destination.state">
+        <div class="image-text">
+          <h2>{{ destination.name }}</h2>
+          <p>{{ destination.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+    <!-- Add any other sections or content you want for the home page -->
+    <header>
+        <h1>Let us plan you a<br> perfect <strong>India Holiday</strong></h1>
+      </header>
+      
+
+      <main>
+        <section class="about">
+          <h2>About Plan4Holiday</h2>
+          <p>Plan4Holiday is a leading travel agency specialized in curating personalized and unforgettable holidays in India. Whether you are an adventurer seeking thrilling experiences, a history enthusiast exploring ancient wonders, or a nature lover embracing scenic beauty, we have the perfect holiday package just for you.</p>
+        </section>
+    
+        <section class="gallery">
+          <h2>Discover India in Pictures</h2>
+          <div class="photo-grid">
+            <img src="https://images.herzindagi.info/image/2022/Oct/places-to-visit.jpg" alt="Hyderabad">
+            <img src="https://i.assetzen.net/i/NMMAO4tn46cT/w:1200/h:808/q:70.jpg" alt="Kerala Backwaters">
+            <img src="https://pyt-blogs.imgix.net/2020/06/himalayas-3989411_960_720.jpg?auto=format&ixlib=php-3.3.0" alt="Himalayas Trekking">
+            <img src="https://chaibisket.com/wp-content/uploads/2019/01/Screenshot-1940-11-11-at-12.59.44-PM-e1548924652683.png" alt="Goa Beaches">
+          </div>
+        </section>
+    
+        <section class="contact">
+          <h2>Contact Us</h2>
+          <p>If you're ready to embark on an extraordinary India holiday, contact us today!</p>
+          <p>Email: info@plan4holiday.com</p>
+          <p>Phone: +1 (123) 456-7890</p>
+        </section>
+      </main>
+
+    
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    
+                    <img width="200" height="200" src="https://img.icons8.com/external-filled-outline-wichaiwi/64/external-tour-digital-economy-filled-outline-wichaiwi.png" alt="external-tour-digital-economy-filled-outline-wichaiwi"/>
+                </div>
+                
+                <p style="position: relative; right: 39%;">&copy; 2023 Plan4Holiday. All rights reserved.</p>
+            </div>
+        </div>
+        
+    </footer>
+
+    <!-- JavaScript (optional) -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</div>
+</body>
+</html>
