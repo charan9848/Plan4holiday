@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Your custom CSS file with the provided styles -->
+    
+</head>
+<body>
+    <h1 style="position: relative; left: 45%; top: 2% "><b>Hotels / Resorts</b></h1>
+    <div class="scroll-container">
+        <div class="gallery">
+            <ul>
+                <li *ngFor="let hotel of hotels" class="hotel-item">
+                    <div class="image-wrapper">
+                        <!-- Add the anchor tag around the image -->
+                        <a [routerLink]="['/booking']">
+                            <img src="{{ hotel.image_url }}" alt="Image">
+                       
+                        <div class="content-overlay">
+                            <div class="content">
+                                <div class="hotel">
+                                    {{ hotel.name }}
+                                </div>
+                                <div class="price">
+                                    <span>Location:</span>
+                                    {{ hotel.location }}
+                                </div>
+                                <div class="price">
+                                    <span>Rating:</span>
+                                    {{ hotel.rating }}
+                                </div>
+                                <div class="price">
+                                    <span>Price per night:</span>
+                                    {{ hotel.price_per_night }}
+                                </div>
+                                <div class="price">
+                                    <span>Amenities:</span>
+                                    {{ hotel.amenities }}
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+/* Global styles for the scroll container */
+.scroll-container {
+    width: 1600px;
+    height: 710px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+  
+  /* Styles for the hotel image gallery */
+ 
+  
+  ul {
+    /* Remove default list styles */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+ 
+  
+  .image-wrapper {
+    /* Add any specific styles for the image wrapper if needed */
+    position: relative;
+    margin: 10px; /* Add margin to create space between images */
+  }
+  
+  .image-wrapper img {
+    /* Add any specific styles for the hotel images if needed */
+    width: 800px;
+    height: 600 px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+  }
+  
+  .content-overlay {
+    /* Add any specific styles for the content overlay if needed */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the overlay background color and opacity */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 20px;
+  }
+  
+  /* Show the content overlay on hover */
+  .hotel-item:hover .content-overlay {
+    opacity: 1;
+  }
+  
+  .content {
+    /* Add any specific styles for the content container if needed */
+    text-align: center;
+    position:absolute;
+    left: 65%;
+    color: #fff;
+  }
+  
+  /* Style the hotel details */
+  .hotel,
+  .price {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  
+  .price span {
+    font-weight: bold;
+  }
+  
+  /* Additional specific styles for the hotel details */
+  /* ... */
+  
+  /* The rest of the provided CSS styles (from your initial code) */
+  
+  /* ... */
+ 
